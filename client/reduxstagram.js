@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { render } from 'react-dom';
-import { Router, Route, browerserHistory, IndexRoute} from 'react-router'
+import { Router, Route, browserHistory, IndexRoute} from 'react-router'
 
 //import css
 import css from './styles/style.styl';
@@ -11,7 +11,7 @@ import Single from './components/Single'
 import PhotoGrid from './components/PhotoGrid'
 
 const routes = (
-  <Router history={browerserHistory}>
+  <Router history={browserHistory}>
     <Route path="/" component={Main}>
       <IndexRoute component={PhotoGrid}></IndexRoute>
       <Route path="/view/:postId" component={Single}></Route>
@@ -19,7 +19,7 @@ const routes = (
   </Router>
 )
 
-render(route, document.getElementById('root'));
+render(routes, document.getElementById('root'));
 
 
 
