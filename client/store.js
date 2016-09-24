@@ -1,15 +1,15 @@
-import { createStore, compse } from 'redux';
+import { createStore, combineReducers } from 'redux';
 import { syncHistoryWithStore } from 'react-router-redux';
 import { browserHistory } from 'react-router';
 
-import rootReducer from './reducer/index'
+import rootReducer from './reducers/index'
 
 import comments from './data/comments';
 import posts from './data/posts';
 
 const defaultState = {
-  posts,
-  comments
+  posts: posts,
+  comments: comments
 };
 
 const store = createStore(rootReducer, defaultState);
