@@ -6,7 +6,7 @@ import { Router, Route, browserHistory, IndexRoute} from 'react-router'
 //import css
 import css from './styles/style.styl';
 
-import Main from './components/Main'
+import App from './components/App'
 import Single from './components/Single'
 import PhotoGrid from './components/PhotoGrid'
 
@@ -18,7 +18,7 @@ import store, { history } from './store';
 const routes = (
   <Provider store={store}>
     <Router history={history}>
-      <Route path="/" component={Main}>
+      <Route path="/" component={App}>
         <IndexRoute component={PhotoGrid}></IndexRoute>
         <Route path="/view/:postId" component={Single}></Route>
       </Route>
