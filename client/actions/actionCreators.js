@@ -9,7 +9,7 @@ export function addComment(postId, author, comment) {
   return {
     type: 'ADD_COMMENT',
     postId,
-    autor,
+    author,
     comment
   }
 }
